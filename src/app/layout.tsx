@@ -17,10 +17,10 @@ export const metadata: Metadata = {
   title: "ShopNest",
   description:
     "Discover trendy fashion, top tech gadgets, and lifestyle essentials at ShopNest — your all-in-one online store. Enjoy fast delivery, secure checkout, and unbeatable deals every day.",
-  icons: {
-    icon: "/favicon.png",
-  },
-  keywords: ['e-commerce', 'shop', 'nextjs', 'products', 'online store']
+  // icons: {
+  //   icon: "/favicon.png",
+  // },
+  keywords: ["e-commerce", "shop", "nextjs", "products", "online store"],
 };
 
 export default function RootLayout({
