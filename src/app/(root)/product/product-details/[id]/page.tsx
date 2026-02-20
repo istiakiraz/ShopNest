@@ -94,7 +94,7 @@ export const dynamicParams = true;
 export async function generateStaticParams() {
   try {
     const res = await fetch("https://fakestoreapi.com/products", {
-      next: { revalidate: 3600 }, // Cache for 1 hour
+      cache: "no-store",
     });
     
     if (!res.ok) {
@@ -122,7 +122,7 @@ export async function generateMetadata({
   try {
     const { id } = await params;
     const res = await fetch(`https://fakestoreapi.com/products/${id}`, {
-      next: { revalidate: 3600 },
+      cache: "no-store",
     });
 
     if (!res.ok) {
@@ -162,7 +162,7 @@ export default async function ProductDetails({
     const { id } = await params;
 
     const res = await fetch(`https://fakestoreapi.com/products/${id}`, {
-      next: { revalidate: 3600 }, // ISR: revalidate every hour
+     cache: "no-store", // ISR: revalidate every hour
     });
 
     if (!res.ok) {
