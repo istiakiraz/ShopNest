@@ -50,7 +50,11 @@ export default function Hero() {
                 <h2 className="text-sm md:text-base text-gray-600 font-semibold">{slide.subtitle}</h2>
                 <h1 className="text-2xl lg:text-5xl md:text-4xl font-bold text-gray-900 my-3">{slide.title}</h1>
                 <p className="text-gray-700 mb-6">{slide.description}</p>
-                <button className="px-6 py-2 bg-indigo-500 text-white rounded cursor-pointer hover:bg-indigo-800 transition">
+                <button  onClick={() => {
+    document.getElementById("products")?.scrollIntoView({
+      behavior: "smooth",
+    });
+  }} className="px-6 py-2 bg-indigo-500 text-white rounded cursor-pointer hover:bg-indigo-800 transition">
                   Shop Now
                 </button>
               </div>
