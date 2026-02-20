@@ -6,23 +6,31 @@ import ProductCard from "./ProductCard";
 import ProductCardSkeleton from "../shared/ProductCardSkeleton";
 
 export default function AllProducts() {
-  const [products, setProducts] = useState<Product[] | null>(null);
+  const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const getData = async () => {
-      setLoading(true);
-      try {
-        const products: Product[] = await getAllProduct();
-        setProducts(products);
-      } catch (error) {
-        console.log(error);
-      } finally {
-        setLoading(false);
+ useEffect(() => {
+  const getData = async () => {
+    setLoading(true);
+    try {
+      const data = await getAllProduct(); 
+      
+      
+      if (data && data.products) {
+        setProducts(data.products); 
+      } else {
+        setProducts([]); 
       }
-    };
-    getData();
-  }, []);
+      
+    } catch (error) {
+      console.log("Error logic:", error);
+      setProducts([]); 
+    } finally {
+      setLoading(false);
+    }
+  };
+  getData();
+}, []);
 
   return <section className="pt-16 pb-12">
 <h1 className='text-center xl:text-5xl text-indigo-500 uppercase md:text-4xl  text-2xl font-bold'>

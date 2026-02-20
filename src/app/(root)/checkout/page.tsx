@@ -36,7 +36,6 @@ export default function CheckoutPage() {
     <div className="my-12 min-h-[60vh]">
       {items.length == 0 ? (
         <div className="flex items-center w-full  flex-col justify-center">
-
           {/* if empty items */}
           <Image
             src="/Empty-rafiki.svg"
@@ -55,9 +54,8 @@ export default function CheckoutPage() {
             </button>
           </Link>
         </div>
-      ) : 
-      // items data show
-      ( 
+      ) : (
+        // items data show
         <div className="md:w-4/5 mx-auto w-[90%] grid grid-cols-1 gap-12">
           <div className="rounded-lg overflow-hidden bg-indigo-400  shadow-md ">
             <h1 className="text-2xl lg:text-4xl font-bold text-white flex items-center gap-4 p-6 ">
@@ -72,7 +70,7 @@ export default function CheckoutPage() {
                 {/* product details */}
                 <div className="flex flex-col lg:flex-row items-center border p-5 rounded-2xl shadow lg:h-80 gap-8 lg:gap-12">
                   <Image
-                    src={item.image}
+                    src={item.images[0]}
                     alt={item.title}
                     width={200}
                     height={50}

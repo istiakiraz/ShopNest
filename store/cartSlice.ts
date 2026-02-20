@@ -5,12 +5,10 @@ export interface CartItem {
   title: string;
   price: number;
   category: string;
-  image: string;
-  rating: {
-    rate: number;
-    count: number;
-  };
+  images: string[];
+  rating: number;   
   quantity: number;
+  stock?: number;   
 }
 
 interface CartState {

@@ -47,7 +47,7 @@ export default function CartSideBar({ items }: Props) {
                 {/* product details */}
                 <div className="flex gap-4">
                   <Image
-                    src={item.image}
+                    src={item.images[0]}
                     alt={item.title}
                     width={50}
                     height={50}

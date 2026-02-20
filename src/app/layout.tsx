@@ -3,9 +3,10 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import { ClerkProvider } from "@clerk/nextjs";
+
 import StoreProvider from "../../StoreProvider/StoreProvider";
 import { Toaster } from "@/components/ui/sonner";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const poppins = Poppins({
   weight: ["400", "600", "700"],
