@@ -5,7 +5,7 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <footer className="bg-indigo-200 ">
+    <footer className="bg-indigo-200 md:rounded-t-[120px] ">
       <div className="px-4 pt-16 mx-auto w-11/12 lg:w-9/12 md:px-24 lg:px-8">
         <div className="grid gap-16 row-gap-10 items-center mb-8 lg:grid-cols-6">
           <div className="md:max-w-md lg:col-span-2">

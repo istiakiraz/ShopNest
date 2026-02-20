@@ -3,7 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-
+import ReactLenis from "lenis/react";
 import StoreProvider from "../../StoreProvider/StoreProvider";
 import { Toaster } from "@/components/ui/sonner";
 import { ClerkProvider } from "@clerk/nextjs";
@@ -31,6 +31,19 @@ export default function RootLayout({
 }>) {
   return (
     <StoreProvider>
+      <ReactLenis root
+    options={{
+      lerp: 0.1,
+      duration: 1.2,
+      orientation: "vertical",
+      gestureOrientation: "vertical",
+      smoothWheel: true,
+      wheelMultiplier: 1,
+      // smoothTouch: false,
+      touchMultiplier: 2,
+
+    }}
+    >
       <ClerkProvider>
         <html lang="en">
           <body className={`${poppins.className} antialiased`}>
@@ -41,6 +54,7 @@ export default function RootLayout({
           </body>
         </html>
       </ClerkProvider>
+      </ReactLenis>
     </StoreProvider>
   );
 }

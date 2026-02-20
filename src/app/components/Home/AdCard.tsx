@@ -5,10 +5,10 @@ import React from "react";
 
 export function AdCard() {
   return (
-    <div className="grid grid-cols-1 mb-20 lg:grid-cols-3 gap-4 w-11/12 2xl:w-9/12 mx-auto ">
+    <div className="grid grid-cols-1 mb-20 md:grid-cols-3 gap-4 w-11/12 2xl:w-9/12 mx-auto ">
       {/* Featured Product: Electronics/Audio */}
       <WobbleCard
-        containerClassName="col-span-1 lg:col-span-2 h-full bg-yellow-600 min-h-[500px] lg:min-h-[300px]"
+        containerClassName="col-span-1 md:col-span-2 h-full bg-yellow-600 min-h-[500px] md:min-h-[300px]"
         className=""
       >
         <div className="max-w-xs">
@@ -16,7 +16,7 @@ export function AdCard() {
             Immersive Sound, Redefined
           </h2>
           <p className="mt-4 text-left text-base/6 text-neutral-200">
-            Experience the new Sonic-X Wireless Headphones. Over 40 hours of 
+            Experience the new Sonic-X Wireless Headphones. Over 40 hours of
             battery life and industry-leading noise cancellation.
           </p>
         </div>
@@ -25,7 +25,7 @@ export function AdCard() {
           width={500}
           height={500}
           alt="Premium Headphones"
-          className="absolute -right-4 lg:-right-[20%] grayscale filter -bottom-10 object-contain rounded-2xl"
+          className="absolute -right-4 md:-right-[40%] lg:-right-[20%] grayscale filter -bottom-10  md:-bottom-50 lg:-bottom-10 object-contain rounded-2xl"
         />
       </WobbleCard>
 
@@ -35,19 +35,19 @@ export function AdCard() {
           Summer Flash Sale!
         </h2>
         <p className="mt-4 max-w-[26rem] text-left text-base/6 text-neutral-200">
-          Get up to **50% OFF** on all summer essentials. Limited time only, 
+          Get up to **50% OFF** on all summer essentials. Limited time only,
           while stocks last.
         </p>
       </WobbleCard>
 
       {/* Lifestyle / Membership */}
-      <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-indigo-700 min-h-[500px] lg:min-h-[600px] xl:min-h-[400px]">
+      <WobbleCard containerClassName="col-span-1 md:col-span-3 bg-indigo-700 min-h-[500px] md:min-h-[600px] xl:min-h-[400px]">
         <div className="max-w-sm">
-          <h2 className="max-w-sm md:max-w-lg text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+          <h2 className="max-w-sm md:max-w-md text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
             Join the Elite Club for Exclusive Early Access
           </h2>
           <p className="mt-4 max-w-[26rem] text-left text-base/6 text-neutral-200">
-            Members get free shipping, birthday rewards, and first dibs on 
+            Members get free shipping, birthday rewards, and first dibs on
             limited edition sneaker drops.
           </p>
         </div>
@@ -56,7 +56,7 @@ export function AdCard() {
           width={500}
           height={500}
           alt="Limited Edition Sneakers"
-          className="absolute -right-10 md:-right-[40%] lg:-right-[10%] -bottom-10 object-contain rounded-2xl"
+          className="absolute -right-10  md:-right-[10%] -bottom-10 object-contain rounded-2xl"
         />
       </WobbleCard>
     </div>

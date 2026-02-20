@@ -18,7 +18,9 @@ export default function CartSideBar({ items }: Props) {
     const handleRemoveCart = (id: number) => dispatch(removeItem({id}));
 
   return (
-    <div className="my-6 h-full">
+    <div  onWheel={e => e.stopPropagation()}
+        onTouchMove={e => e.stopPropagation()}
+         className="my-6 h-full">
       <h1 className="text-center font-bold text-2xl text-indigo-500 mb-6">
         {" "}
         Your Cart

@@ -8,14 +8,14 @@ import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 
 export default function Navbar() {
   return (
-    <nav className="h-[10vh] sticky top-0 z-50 bg-white shadow-md">
+    <nav className="h-[10vh] sticky top-0 z-50 bg-white backdrop-blur shadow-md">
       <div className="flex items-center justify-between w-[90%] md:w-4/5 mx-auto h-full">
         {/* logo  */}
         <Link href="/">
           <Image
             src="/shopnest.png"
             alt="shop nest logo"
-            className="hover:scale-110 duration-600"
+            className="hover:scale-110 w-22  duration-600"
             width={120}
             height={120}
           />

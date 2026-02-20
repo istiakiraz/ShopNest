@@ -1,7 +1,7 @@
 import { CometCard } from "@/components/ui/comet-card";
-import { Props } from "../../typing";
+import { Props } from "../../../../typing";
 
-export function ImgCard({product} : Props) {
+export function ImgCard({ product }: Props) {
   return (
     <CometCard>
       <button
@@ -30,7 +30,9 @@ export function ImgCard({product} : Props) {
         </div>
         <div className="mt-2 flex flex-shrink-0 items-center justify-between p-4 font-mono text-black">
           <div className="text-xs">{product?.brand}</div>
-          <div className="text-xs text-gray-900 opacity-50">${product?.price}</div>
+          <div className="text-xs text-gray-900 opacity-50">
+            ${product?.price}
+          </div>
         </div>
       </button>
     </CometCard>

@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { Product } from "../../../../../../typing";
 import AddToCart from "./add-cart";
-import { ImgCard } from "@/Shared/ImgCard";
+import { ImgCard } from "@/app/components/shared/ImgCard";
 
 // Skip pre-rendering all products at build time
 export const dynamic = "force-dynamic";
